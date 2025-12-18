@@ -2,6 +2,7 @@ const CLASS_OPTIONSITEM__SELECTED = 'OptionsItem--selected';
 const CLASS_HIDDEN = 'hidden';
 const USING = 'using';
 const AS = 'as';
+const CAPSULE = 'capsule';
 const summaryAsUsingList = document.querySelectorAll('.OrderSummaryAsUsing');
 
 let optionsWrapperButtons = document.querySelectorAll('.OptionsWrapper');
@@ -94,7 +95,7 @@ function processSelection(optionsItem) {
 function enableDisableGrindDetails(pref) {
     let grindDetails = document.querySelector('#questionGrind details');
 
-    if (pref === 'capsule') {
+    if (pref === CAPSULE) {
         disableDetails(grindDetails);
         showGrindText(false);
     } else {
@@ -122,7 +123,7 @@ function enableDetails(details) {
 }
 
 function updateSummaryAsUsing(pref) {
-    if (pref === 'capsule') {
+    if (pref === CAPSULE) {
         summaryAsUsingList.forEach((elem) => {
             elem.innerHTML = USING;
         });
@@ -192,8 +193,7 @@ function enableDisableSubscribeBtn() {
         beanTypeValue != null &&
         qtyValue != null &&
         deliveryValue != null &&
-        (prefValue === 'capsule' ||
-            (prefValue !== 'capsule' && grindValue != null))
+        (prefValue === CAPSULE || (prefValue !== CAPSULE && grindValue != null))
     ) {
         subscribeBtn.disabled = false;
     } else {

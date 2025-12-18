@@ -22,6 +22,5 @@
         border: var(--borderWidth) solid var(--color-teal-600);
         width: var(--circleWidth);
         height: var(--circleWidth);
-        /* margin-right: 185px; */
     }
 }
