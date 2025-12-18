@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon-32x32.png"
+        />
+
+        <link rel="stylesheet" href="styles/base.css" />
+        <link rel="stylesheet" href="styles/layout.css" />
+        <link rel="stylesheet" href="styles/components/buttons.css" />
+        <link rel="stylesheet" href="styles/components/misc.css" />
+        <link rel="stylesheet" href="styles/pages/home.css" />
+
+        <title>Frontend Mentor | Coffeeroasters subscription site</title>
+    </head>
+    <body>
+        <div class="PageContainer">
+            <header class="HeaderContainer">
+                <div class="HeaderContent">
+                    <img
+                        class="Logo"
+                        src="/assets/shared/desktop/logo.svg"
+                        alt="Coffeeroasters Logo"
+                    />
+                    <div class="HeaderNav__container">
+                        <button
+                            type="button"
+                            class="OpenMobileMenuBtn"
+                            aria-label="Button to open the mobile menu"
+                        >
+                            <img
+                                class="HeaderNav__hamburgerIcon"
+                                src="assets/shared/mobile/icon-hamburger.svg"
+                                alt="Hamburger icon"
+                            />
+                        </button>
+                        <nav>
+                            <a class="NavLinks--header" href="index.html"
+                                >Home</a
+                            >
+                            <a class="NavLinks--header" href="about.html"
+                                >About us</a
+                            >
+                            <a class="NavLinks--header" href="plan.html"
+                                >Create your plan</a
+                            >
+                        </nav>
+                    </div>
+                </div>
+                <div class="HeaderMobileMenuContainer">
+                    <div class="MobileMenu__content">
+                        <img
+                            class="Logo"
+                            src="/assets/shared/desktop/logo.svg"
+                            alt="Coffeeroasters Logo"
+                        />
+                        <button
+                            type="button"
+                            class="CloseMobileMenuBtn"
+                            aria-label="Button to close the mobile menu"
+                        >
+                            <img
+                                class="MobileMenu__closeIcon"
+                                src="assets/shared/mobile/icon-close.svg"
+                                alt="Close icon"
+                            />
+                        </button>
+                    </div>
+                    <nav>
+                        <a class="NavLinks--header" href="index.html">Home</a>
+                        <a class="NavLinks--header" href="about.html"
+                            >About us</a
+                        >
+                        <a class="NavLinks--header" href="plan.html"
+                            >Create your plan</a
+                        >
+                    </nav>
+                </div>
+            </header>
+
+            <main class="MainContainer">
+                <section class="HeroSection">
+                    <picture>
+                        <source
+                            media="(min-width: 1280px)"
+                            srcset="
+                                /assets/home/desktop/image-hero-coffeepress.jpg
+                            "
+                        />
+                        <source
+                            media="(min-width: 768px)"
+                            srcset="
+                                /assets/home/tablet/image-hero-coffeepress.jpg
+                            "
+                        />
+                        <img
+                            class="HeroSection__backgroundImg"
+                            src="/assets/home/mobile/image-hero-coffeepress.jpg"
+                            alt="Hero background image"
+                        />
+                    </picture>
+                    <div class="HeroSection__mainText">
+                        <h1>Great coffee made simple.</h1>
+                        <p class="HeroSection__description">
+                            Start your mornings with the world’s best coffees.
+                            Try our expertly curated artisan coffees from our
+                            best roasters delivered directly to your door, at
+                            your schedule.
+                        </p>
+                    </div>
+                    <a class="PrimaryBtn CtaBtn" href="plan.html"
+                        >Create your plan</a
+                    >
+                </section>
+                <section class="CollectionSection">
+                    <h2>our collection</h2>
+                    <ul class="CollectionSection__list">
+                        <li class="CollectionList__item">
+                            <img
+                                src="/assets/home/desktop/image-gran-espresso.png"
+                                alt="Collection Item Image for Gran Espresso"
+                            />
+                            <div class="CollectionItem__text">
+                                <p class="CollectionItem__name">
+                                    Gran Espresso
+                                </p>
+                                <p class="CollectionItem__description">
+                                    Light and flavorful blend with cocoa and
+                                    black pepper for an intense experience
+                                </p>
+                            </div>
+                        </li>
+                        <li class="CollectionList__item">
+                            <img
+                                src="/assets/home/desktop/image-planalto.png"
+                                alt="Collection Item Image for Planalto"
+                            />
+                            <div class="CollectionItem__text">
+                                <p class="CollectionItem__name">Planalto</p>
+                                <p class="CollectionItem__description">
+                                    Brazilian dark roast with rich and velvety
+                                    body, and hints of fruits and nuts
+                                </p>
+                            </div>
+                        </li>
+                        <li class="CollectionList__item">
+                            <img
+                                src="/assets/home/desktop/image-piccollo.png"
+                                alt="Collection Item Image for Piccollo"
+                            />
+                            <div class="CollectionItem__text">
+                                <p class="CollectionItem__name">Piccollo</p>
+                                <p class="CollectionItem__description">
+                                    Mild and smooth blend featuring notes of
+                                    toasted almond and dried cherry
+                                </p>
+                            </div>
+                        </li>
+                        <li class="CollectionList__item">
+                            <img
+                                src="/assets/home/desktop/image-danche.png"
+                                alt="Collection Item Image for Danche"
+                            />
+                            <div class="CollectionItem__text">
+                                <p class="CollectionItem__name">Danche</p>
+                                <p class="CollectionItem__description">
+                                    Ethiopian hand-harvested blend densely
+                                    packed with vibrant fruit notes
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="WhyChooseSection">
+                    <div class="WhyChoose__text">
+                        <h3 class="Section__title">Why choose us?</h3>
+                        <p class="Section__description">
+                            A large part of our role is choosing which
+                            particular coffees will be featured in our range.
+                            This means working closely with the best coffee
+                            growers to give you a more impactful experience on
+                            every level.
+                        </p>
+                    </div>
+                    <ul class="Benefits__list">
+                        <li class="BenefitsItem">
+                            <img
+                                class="BenefitsItem__icon"
+                                src="/assets/home/desktop/icon-coffee-bean.svg"
+                                alt="Coffee bean icon"
+                            />
+                            <div class="BenefitsItem__text">
+                                <p class="BenefitsItem__title">Best quality</p>
+                                <p class="BenefitsItem__description">
+                                    Discover an endless variety of the world’s
+                                    best artisan coffee from each of our
+                                    roasters.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="BenefitsItem">
+                            <img
+                                class="BenefitsItem__icon"
+                                src="/assets/home/desktop/icon-gift.svg"
+                                alt="Gift icon"
+                            />
+                            <div class="BenefitsItem__text">
+                                <p class="BenefitsItem__title">
+                                    Exclusive benefits
+                                </p>
+                                <p class="BenefitsItem__description">
+                                    Special offers and swag when you subscribe,
+                                    including 30% off your first shipment.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="BenefitsItem">
+                            <img
+                                class="BenefitsItem__icon Icon--truck"
+                                src="/assets/home/desktop/icon-truck.svg"
+                                alt="Truck icon"
+                            />
+                            <div class="BenefitsItem__text">
+                                <p class="BenefitsItem__title">Free shipping</p>
+                                <p class="BenefitsItem__description">
+                                    We cover the cost and coffee is delivered
+                                    fast. Peak freshness: guaranteed.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="HowItWorksSection">
+                    <h3 class="Section__title">How it works</h3>
+                    <div class="StepsGraphic">
+                        <span class="StepsLine"></span>
+                        <span class="StepsCircle"></span>
+                        <span class="StepsCircle"></span>
+                        <span class="StepsCircle"></span>
+                    </div>
+                    <ol class="HowItWorks__list">
+                        <li class="HowItWorksItem">
+                            <p class="HowItWorksItem__count">01</p>
+                            <p class="HowItWorksItem__title">
+                                Pick your coffee
+                            </p>
+                            <p class="HowItWorksItem__description">
+                                Select from our evolving range of artisan
+                                coffees. Our beans are ethically sourced and we
+                                pay fair prices for them. There are new coffees
+                                in all profiles every month for you to try out.
+                            </p>
+                        </li>
+                        <li class="HowItWorksItem">
+                            <p class="HowItWorksItem__count">02</p>
+                            <p class="HowItWorksItem__title">
+                                Choose the frequency
+                            </p>
+                            <p class="HowItWorksItem__description">
+                                Customize your order frequency, quantity, even
+                                your roast style and grind type. Pause, skip or
+                                cancel your subscription with no commitment
+                                through our online portal.
+                            </p>
+                        </li>
+                        <li class="HowItWorksItem">
+                            <p class="HowItWorksItem__count">03</p>
+                            <p class="HowItWorksItem__title">
+                                Receive and enjoy!
+                            </p>
+                            <p class="HowItWorksItem__description">
+                                We ship your package within 48 hours, freshly
+                                roasted. Sit back and enjoy award-winning
+                                world-class coffees curated to provide a
+                                distinct tasting experience.
+                            </p>
+                        </li>
+                    </ol>
+                    <a class="PrimaryBtn CtaBtn" href="plan.html"
+                        >Create your plan</a
+                    >
+                </section>
+            </main>
+
+            <div class="FooterContainer">
+                <footer class="Footer__content">
+                    <img
+                        class="Logo Footer__logo"
+                        src="/assets/shared/desktop/logo-light.svg"
+                        alt="Coffeeroasters Logo"
+                    />
+                    <div class="Footer__links">
+                        <a class="NavLinks--footer" href="index.html">Home</a>
+                        <a class="NavLinks--footer" href="about.html"
+                            >About us</a
+                        >
+                        <a class="NavLinks--footer" href="plan.html"
+                            >Create your plan</a
+                        >
+                    </div>
+                    <div class="Footer__socialIcons">
+                        <a href="https://www.facebook.com/">
+                            <span class="SocialIconWrapper">
+                                <img
+                                    src="/assets/shared/desktop/icon-facebook.svg"
+                                    alt="Facebook Icon"
+                                />
+                            </span>
+                        </a>
+                        <a href="https://x.com/">
+                            <span class="SocialIconWrapper">
+                                <img
+                                    src="/assets/shared/desktop/icon-twitter.svg"
+                                    alt="Twitter/X Icon"
+                                />
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                            <span class="SocialIconWrapper">
+                                <img
+                                    src="/assets/shared/desktop/icon-instagram.svg"
+                                    alt="Instagram Icon"
+                                />
+                            </span>
+                        </a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="src/menu.js"></script>
+    </body>
+</html>

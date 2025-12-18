@@ -1,0 +1,192 @@
+.PageContainer {
+    margin: 24px auto;
+    max-width: 343px;
+
+    @media screen and (min-width: 768px) {
+        margin: 40px auto;
+        max-width: 704px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-width: 1270px;
+    }
+}
+
+/* header */
+.Logo {
+    width: 160px;
+    height: 16px;
+}
+
+.HeaderContainer {
+    position: relative;
+    margin-bottom: 40px;
+
+    .HeaderContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .HeaderNav__container {
+            nav {
+                display: none;
+
+                .NavLinks--header {
+                    color: var(--color-neutral-500);
+                    font: var(--fontpreset8);
+                }
+
+                ..NavLinks--header:hover {
+                    color: var(--color-neutral-900);
+                }
+            }
+
+            .HamburgerMenuBtn {
+                .HeaderNav__hamburgerIcon {
+                    width: 16px;
+                    height: 15px;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .Logo {
+                width: 237px;
+                height: 24px;
+            }
+            .HeaderNav__container nav {
+                display: flex;
+                flex-direction: row;
+                gap: 33px;
+            }
+
+            .OpenMobileMenuBtn {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 1280px) {
+            max-width: 1270px;
+        }
+    }
+
+    .HeaderMobileMenuContainer {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        gap: 80px;
+        padding-bottom: 53px;
+        align-content: start;
+        background-color: var(--color-neutral-55);
+        opacity: 0.95;
+        z-index: 1;
+
+        .MobileMenu__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .Logo {
+                width: 171px;
+                height: 17px;
+            }
+
+            .MobileMenu__closeIcon {
+                width: 13px;
+                height: 12px;
+            }
+        }
+
+        nav {
+            display: grid;
+            gap: 32px;
+            justify-items: center;
+            align-items: center;
+
+            a {
+                font: var(--fontpreset4);
+                color: var(--color-neutral-950);
+            }
+        }
+    }
+}
+
+/* main */
+.MainContainer {
+    display: grid;
+    --mainContainer-rowGap: 80px;
+    row-gap: var(--mainContainer-rowGap);
+
+    @media screen and (min-width: 1280px) {
+        gap: 140px;
+    }
+}
+
+/* section */
+section p {
+    font: var(--fontpreset6);
+}
+
+/* footer */
+.FooterContainer {
+    margin-top: 80px;
+    background-color: var(--color-neutral-900);
+    padding: 40px 20px;
+
+    .Footer__content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        text-align: center;
+
+        .Footer__logo {
+            display: block;
+        }
+
+        .Footer__links {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            .NavLinks--footer {
+                text-transform: uppercase;
+                font: var(--fontpreset8);
+                color: var(--color-neutral-500);
+            }
+
+            .NavLinks--footer:hover {
+                color: var(--color-neutral-0);
+            }
+        }
+
+        .Footer__socialIcons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .SocialIconWrapper {
+                display: inline-block;
+                img {
+                    display: block;
+                }
+            }
+
+            .SocialIconWrapper:hover {
+                filter: url('filters.svg#socialIconHoverFilter');
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-top: 140px;
+        max-width: 1270px;
+
+        .Footer__content {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}

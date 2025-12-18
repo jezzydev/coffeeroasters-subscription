@@ -1,0 +1,26 @@
+.PrimaryBtn {
+    background-color: var(--color-teal-600);
+    color: var(--color-neutral-50);
+    border-radius: 6px;
+    font: var(--fontpreset5);
+
+    &:hover {
+        background-color: var(--color-teal-300);
+    }
+
+    &:focus {
+        box-shadow:
+            0 0 0 3px var(--color-neutral-0),
+            0 0 0 5px var(--color-teal-600);
+    }
+
+    &:disabled {
+        background-color: var(--color-neutral-200);
+    }
+}
+
+.CtaBtn {
+    width: 218px;
+    height: 57px;
+    padding: 16px 32px;
+}

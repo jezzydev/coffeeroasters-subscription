@@ -1,0 +1,156 @@
+/* Global Styles, resets, and defaults. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    min-height: 100vh;
+
+    /* colors */
+    --color-neutral-950: #333d4b;
+    --color-neutral-900: #343e4c;
+    --color-neutral-500: #848990;
+    --color-neutral-200: #e1ddda;
+    --color-neutral-100: #f4f1eb;
+    --color-neutral-55: #fefcf7;
+    --color-neutral-50: #fefcf6;
+    --color-neutral-0: #ffffff;
+
+    --color-teal-600: #0e8684;
+    --color-teal-300: #66d2cf;
+
+    --color-orange-200: #fdd6ba;
+
+    /* fonts */
+    --fontWeight-900: 900;
+    --fontFamily-Fraunces: 'Fraunces', serif;
+    --fontFamily-Barlow: 'Barlow', sans-serif;
+    --fontpreset1: var(--fontWeight-900) 72px/100% var(--fontFamily-Fraunces);
+    --fontpreset1-tablet: var(--fontWeight-900) 48px/100%
+        var(--fontFamily-Fraunces);
+    --fontpreset1-mobile: var(--fontWeight-900) 40px/100%
+        var(--fontFamily-Fraunces);
+    --fontpreset2: var(--fontWeight-900) 40px/120% var(--fontFamily-Fraunces);
+    --fontpreset2-tablet: var(--fontWeight-900) 32px/140%
+        var(--fontFamily-Fraunces);
+    --fontpreset2-mobile: var(--fontWeight-900) 28px/120%
+        var(--fontFamily-Fraunces);
+    --fontpreset3: var(--fontWeight-900) 32px/114% var(--fontFamily-Fraunces);
+    --fontpreset4: var(--fontWeight-900) 24px/150% var(--fontFamily-Fraunces);
+    --fontpreset5: var(--fontWeight-900) 18px/140% var(--fontFamily-Fraunces);
+    --fontpreset6: 400 16px/160% var(--fontFamily-Barlow);
+    --fontpreset7: 400 16px/160% var(--fontFamily-Barlow);
+    --fontpreset8: 700 12px/130% var(--fontFamily-Barlow);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--color-neutral-900);
+    background-color: var(--color-neutral-55);
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    margin: 0;
+    font: var(--fontpreset1-mobile);
+}
+
+h2 {
+    margin: 0;
+    font: var(--fontpreset2-mobile);
+}
+
+h3 {
+    margin: 0;
+}
+
+a {
+    background-color: transparent;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    border-style: none;
+}
+
+button {
+    border: none;
+    padding: 0px;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}

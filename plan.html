@@ -1,0 +1,344 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components/buttons.css" />
+  <link rel="stylesheet" href="styles/components/misc.css" />
+  <link rel="stylesheet" href="styles/pages/plan.css" />
+  <title>Frontend Mentor | Coffeeroasters subscription site</title>
+</head>
+
+<body>
+  <div class="PageContainer">
+     <header class="HeaderContainer">
+        <div class="HeaderContent">
+            <img
+                class="Logo"
+                src="/assets/shared/desktop/logo.svg"
+                alt="Coffeeroasters Logo"
+            />
+            <div class="HeaderNav__container">
+              <button type="button" class="OpenMobileMenuBtn">
+                  <img
+                      class="HeaderNav__hamburgerIcon"
+                      src="assets/shared/mobile/icon-hamburger.svg"
+                      alt="Hamburger icon" 
+                      aria-label="Button to open the mobile menu"
+                  />
+              </button>
+                <nav>
+                    <a class="NavLinks--header" href="index.html">Home</a>
+                    <a class="NavLinks--header" href="about.html">About us</a>
+                    <a class="NavLinks--header" href="plan.html">Create your plan</a>
+                </nav>
+            </div>
+        </div>
+        <div class="HeaderMobileMenuContainer">
+            <div class="MobileMenu__content">
+                <img
+                    class="Logo"
+                    src="/assets/shared/desktop/logo.svg"
+                    alt="Coffeeroasters Logo"
+                />
+                <button type="button" class="CloseMobileMenuBtn">
+                    <img
+                        class="MobileMenu__closeIcon"
+                        src="assets/shared/mobile/icon-close.svg"
+                        alt="Close icon"
+                        aria-label="Button to close the mobile menu"
+                    />
+                </button>
+            </div>
+            <nav>
+                <a class="NavLinks--header" href="index.html">Home</a>
+                <a class="NavLinks--header" href="about.html">About us</a>
+                <a class="NavLinks--header" href="plan.html">Create your plan</a>
+            </nav>
+        </div>
+      </header>
+    <main class="MainContainer">
+      <section class="HeroSection">
+        <picture>
+          <source media="(min-width: 1280px)" srcset="/assets/plan/desktop/image-hero-blackcup.jpg"/>
+          <source media="(min-width: 768px)" srcset="/assets/plan/tablet/image-hero-blackcup.jpg" />
+          <img class="HeroSection__backgroundImg" src="/assets/plan/mobile/image-hero-blackcup.jpg" alt="Black cup of coffee image"/>
+        </picture>
+        <div class="HeroSection__mainText">
+          <h2>Create plan</h2>
+          <p class="HeroSection__description">
+            Build a subscription plan that best fits your needs. We offer an assortment of the best
+            artisan coffees from around the globe delivered fresh to your door.
+          </p>
+        </div>
+      </section>
+      <section class="StepsSection">
+        <div class="StepsGraphic">
+            <span class="StepsLine"></span>
+            <span class="StepsCircle"></span>
+            <span class="StepsCircle"></span>
+            <span class="StepsCircle"></span>
+        </div>
+        <ol class="Steps__list">
+          <li class="StepsItem">
+            <p class="StepsItem__count">01</p>
+            <p class="StepsItem__title">Pick your<br>coffee</p>
+            <p class="StepsItem__description">
+              Select from our evolving range of artisan coffees. Our beans are ethically
+              sourced and we pay fair prices for them. There are new coffees in all profiles
+              every month for you to try out.
+            </p>
+          </li>
+          
+          <li class="StepsItem">
+            <p class="StepsItem__count">02</p>
+            <p class="StepsItem__title">Choose the frequency</p>
+            <p class="StepsItem__description">
+              Customize your order frequency, quantity, even your roast style and grind type.
+              Pause, skip or cancel your subscription with no commitment through our online portal.
+            </p>
+          </li>
+          
+          <li class="StepsItem">
+            <p class="StepsItem__count">03</p>
+            <p class="StepsItem__title">Receive and enjoy!</p>
+            <p class="StepsItem__description">
+              We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning
+              world-class coffees curated to provide a distinct tasting experience.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <section class="PreferencesSection">
+        <ol class="Preferences__list">
+          <li class="PreferencesItem PreferencesItem--selected"><a href="#questionCoffeePref">
+            <p class="PreferencesItem__count">01</p> <p class="PreferencesItem__name">Preferences</p>
+          </a></li>
+          <li class="PreferencesSeparatorItem"><hr/></li>
+          <li class="PreferencesItem"><a href="#questionBeanType">
+            <p class="PreferencesItem__count">02</p> <p class="PreferencesItem__name">Bean type</p>
+          </a></li>
+          <li class="PreferencesSeparatorItem"><hr/></li>
+          <li class="PreferencesItem"><a href="#questionQuantity">
+            <p class="PreferencesItem__count">03</p> <p class="PreferencesItem__name">Quantity</p>
+          </a></li>
+          <li class="PreferencesSeparatorItem"><hr/></li>
+          <li class="PreferencesItem"><a href="#questionGrind">
+            <p class="PreferencesItem__count">04</p> <p class="PreferencesItem__name">Grind option</p>
+          </a></li>
+          <li class="PreferencesSeparatorItem"><hr/></li>
+          <li class="PreferencesItem"><a href="#questionDelivery">
+            <p class="PreferencesItem__count">05</p> <p class="PreferencesItem__name">Deliveries</p>
+          </a></li>
+        </ol>
+        <div class="QuestionsContainer">
+          <ul class="Questions__list">
+            <li id="questionCoffeePref" class="QuestionsItem" data-question="pref">
+              <details open>
+                <summary class="Question">How do you drink your coffee?</summary>
+                <ul class="Options__list">
+                  <li id="prefCapsule" class="OptionsItem" data-pref="capsule">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select capsule option">
+                      <p class="OptionsItem__title">Capsule</p>
+                      <p class="OptionsItem__description">Compatible with Nespresso systems and similar brewers</p>
+                    </button>
+                  </li>
+                  <li id="prefFilter" class="OptionsItem" data-pref="filter">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select filter option">
+                      <p class="OptionsItem__title">Filter</p>
+                      <p class="OptionsItem__description">For pour over or drip methods like Aeropress, Chemex, and V60</p>
+                    </button>
+                  </li>
+                  <li id="prefEspresso" class="OptionsItem" data-pref="espresso">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select espresso option">
+                      <p class="OptionsItem__title">Espresso</p>
+                      <p class="OptionsItem__description">Dense and finely ground beans for an intense, flavorful experience</p>
+                    </button>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li id="questionBeanType" class="QuestionsItem" data-question="beantype">
+              <details>
+                <summary>What type of coffee?</summary>
+                <ul class="Options__list">
+                  <li id="beanSingleOrigin" class="OptionsItem" data-beantype="singleorigin">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select single origin option">
+                      <p class="OptionsItem__title">Single origin</p>
+                      <p class="OptionsItem__description">Distinct, high quality coffee from a specific family-owned farm</p>
+                    </button>
+                  </li>
+                  <li id="beanDecaf" class="OptionsItem" data-beantype="decaf">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select decaf option">
+                      <p class="OptionsItem__title">Decaf</p>
+                      <p class="OptionsItem__description">Just like regular coffee, except the caffeine has been removed</p>
+                    </button>
+                  </li>
+                  <li id="beanBlended" class="OptionsItem" data-beantype="blended">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select blended option">
+                      <p class="OptionsItem__title">Blended</p>
+                      <p class="OptionsItem__description">Combination of two or three dark roasted beans of organic coffees</p>
+                    </button>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li id="questionQuantity" class="QuestionsItem" data-question="qty">
+              <details>
+                <summary>How much would you like?</summary>
+                <ul class="Options__list">
+                  <li id="qty250" class="OptionsItem" data-qty="250g">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select 250g option">
+                      <p class="OptionsItem__title">250g</p>
+                      <p class="OptionsItem__description">Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+                    </button>
+                  </li>
+                  <li id="qty500" class="OptionsItem" data-qty="500g">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select 500g option">
+                      <p class="OptionsItem__title">500g</p>
+                      <p class="OptionsItem__description">Perfect option for a couple. Yields about 40 delectable cups.</p>
+                    </button>
+                  </li>
+                  <li id="qty1000" class="OptionsItem" data-qty="1000g">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select 1000g option">
+                      <p class="OptionsItem__title">1000g</p>
+                      <p class="OptionsItem__description">Perfect for offices and events. Yields about 90 delightful cups.</p>
+                    </button>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li id="questionGrind" class="QuestionsItem" data-question="grind">
+              <details>
+                <summary>Want us to grind them?</summary>
+                <ul class="Options__list">
+                  <li id="grindWholeBean" class="OptionsItem" data-grind="wholebean">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select wholebean option">
+                      <p class="OptionsItem__title">Wholebean</p>
+                      <p class="OptionsItem__description">Best choice if you cherish the full sensory experience</p>
+                    </button>
+                  </li>
+                  <li id="grindFilter" class="OptionsItem" data-grind="filter">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select filter option">
+                      <p class="OptionsItem__title">Filter</p>
+                      <p class="OptionsItem__description">For drip or pour-over coffee methods such as V60 or Aeropress</p>
+                    </button>
+                  </li>
+                  <li id="grindCafetiere" class="OptionsItem" data-grind="cafetiere">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select cafetiére option">
+                      <p class="OptionsItem__title">Cafetiére</p>
+                      <p class="OptionsItem__description">Course ground beans specially suited for french press coffee</p>
+                    </button>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li id="questionDelivery" class="QuestionsItem" data-question="delivery">
+              <details>
+                <summary>How often should we deliver?</summary>
+                <ul class="Options__list">
+                  <li id="deliveryWeekly" class="OptionsItem" data-delivery="weekly">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select weekly option">
+                      <p class="OptionsItem__title">Every week</p>
+                      <p class="OptionsItem__description">$<span class="ShipmentPrice">0.00</span> per shipment. Includes free first-class shipping.</p>
+                    </button>
+                  </li>
+                  <li id=deliveryBiWeekly class="OptionsItem" data-delivery="biweekly">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select biweekly option">
+                      <p class="OptionsItem__title">Every 2 weeks</p>
+                      <p class="OptionsItem__description">$<span class="ShipmentPrice">0.00</span> per shipment. Includes free priority shipping.</p>
+                    </button>
+                  </li>
+                  <li id="deliveryMonthly" class="OptionsItem" data-delivery="monthly">
+                    <button type="button" class="OptionsWrapper" aria-label="Button to select monthly option">
+                      <p class="OptionsItem__title">Every month</p>
+                      <p class="OptionsItem__description">$<span class="ShipmentPrice">0.00</span> per shipment. Includes free priority shipping.</p>
+                    </button>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+          <div class="OrderSummaryContainer">
+            <div class=OrderSummary__content>
+              <p class="OrderSummary__title">Order Summary</p>
+              <p class="OrderSummary__text">
+                “I drink my coffee <span class="OrderSummaryAsUsing">using</span> <span class="OrderSummarySelectedOption" data-summary="pref">_____</span>, with a <span class="OrderSummarySelectedOption" data-summary="beantype">_____</span> type of bean. <span class="OrderSummarySelectedOption" data-summary="qty">_____</span> <span class="OrderSummary__grindText">ground ala <span class="OrderSummarySelectedOption" data-summary="grind">_____</span></span>, sent to me <span class="OrderSummarySelectedOption" data-summary="delivery">_____</span>.”
+              </p>
+            </div>
+            <button id="subscribeBtn" class="PrimaryBtn CtaBtn" type="button" aria-label="Subscribe button" disabled>Create your plan</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Modal -->
+    <dialog id="orderSummaryDialog">
+      <h2 class="OrderSummaryDialog__header">Order Summary</h2>
+      <div class="OrderSummaryDialog__content">
+        <div class="OrderSummaryDialog__text">
+          <p class="OrderSummaryText__mainText">
+            “I drink my coffee <span class="OrderSummaryAsUsing">using</span> <span class="OrderSummarySelectedOption" data-summary="pref">_____</span>, with a <span class="OrderSummarySelectedOption" data-summary="beantype">_____</span> type of bean. <span class="OrderSummarySelectedOption" data-summary="qty">_____</span> <span class="OrderSummary__grindText">ground ala <span class="OrderSummarySelectedOption" data-summary="grind">_____</span></span>, sent to me <span class="OrderSummarySelectedOption" data-summary="delivery">_____</span>.”
+          </p>
+          <p class="OrderSummaryText__subText">
+            Is this correct? You can proceed to checkout or go back to plan selection if something
+            is off. Subscription discount codes can also be redeemed at the checkout.
+          </p>
+        </div>
+
+        <div class="OrderSummaryDialog__footer">
+          <p class="OrderSummaryDialog__monthlyCost"><span class="OrderTotalAmount">$_____</span><span>/mo</span></p>
+          <button id="checkoutBtn" class="PrimaryBtn" aria-label="Checkout button">Checkout</button>
+        </div>
+      </div>
+      
+    </dialog>
+    <!-- End modal -->
+    
+     <div class="FooterContainer">
+        <footer class="Footer__content">
+            <img
+                class="Logo Footer__logo"
+                src="/assets/shared/desktop/logo-light.svg"
+                alt="Coffeeroasters Logo"
+            />
+            <div class="Footer__links">
+                <a class="NavLinks--footer" href="index.html">Home</a>
+                <a class="NavLinks--footer" href="about.html">About us</a>
+                <a class="NavLinks--footer" href="plan.html">Create your plan</a>
+            </div>
+            <div class="Footer__socialIcons">
+                <a href="https://www.facebook.com/">
+                    <span class="SocialIconWrapper">
+                      <img
+                          src="/assets/shared/desktop/icon-facebook.svg"
+                          alt="Facebook Icon"
+                      />
+                    </span>
+                </a>
+                <a href="https://x.com/">
+                    <span class="SocialIconWrapper">
+                      <img
+                          src="/assets/shared/desktop/icon-twitter.svg"
+                          alt="Twitter/X Icon"
+                      />
+                    </span>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <span class="SocialIconWrapper">
+                      <img
+                          src="/assets/shared/desktop/icon-instagram.svg"
+                          alt="Instagram Icon"
+                      />
+                    </span>
+                </a>
+            </div>
+        </footer>
+    </div>
+  </div>
+  <script src="/src/menu.js"></script>
+  <script src="src/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.StepsGraphic {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 464px;
+
+    .StepsLine {
+        position: absolute;
+        border-top: 2px solid var(--color-orange-200);
+        height: 0px;
+        width: 100%;
+        top: 50%;
+        z-index: -1;
+    }
+
+    .StepsCircle {
+        --borderWidth: 2px;
+        --circleWidth: 31px;
+        background-color: var(--color-neutral-50);
+        border-radius: 50px;
+        border: var(--borderWidth) solid var(--color-teal-600);
+        width: var(--circleWidth);
+        height: var(--circleWidth);
+        /* margin-right: 185px; */
+    }
+}

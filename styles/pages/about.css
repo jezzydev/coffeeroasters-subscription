@@ -1,0 +1,218 @@
+.HeroSection {
+    position: relative;
+    color: var(--color-neutral-50);
+    padding: 93px 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .HeroSection__backgroundImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .HeroSection__mainText {
+        display: grid;
+        row-gap: 24px;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 113px 48px;
+        justify-content: left;
+        text-align: left;
+
+        .HeroSection__mainText {
+            max-width: 445px;
+
+            h2 {
+                font: var(--fontpreset2-tablet);
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 140px 80px;
+
+        .HeroSection__mainText {
+            h2 {
+                font: var(--fontpreset2);
+            }
+        }
+    }
+}
+
+.CommitmentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    justify-content: center;
+
+    .CommitmentImg {
+        border-radius: 8px;
+    }
+
+    .Commitment__text {
+        display: grid;
+        gap: 20px;
+        text-align: center;
+    }
+
+    @media screen and (width < 768px) {
+        .CommitmentImg {
+            max-width: 343px;
+            max-height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+
+        .Commitment__text {
+            text-align: left;
+            gap: 32px;
+
+            h2 {
+                font: var(--fontpreset2);
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-left: 80px;
+        padding-right: 80px;
+        gap: 125px;
+    }
+}
+
+.UncompromisingSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    .ImageContainer {
+        position: relative;
+        margin-bottom: -74px;
+        width: 280px;
+        height: 156px;
+        overflow: hidden;
+        border-radius: 8px;
+
+        .UncompromisingImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-view-box: xywh(0px 0px 275px 200px);
+        }
+    }
+
+    .Uncompromising__text {
+        display: grid;
+        gap: 32px;
+        background-color: var(--color-neutral-900);
+        color: var(--color-neutral-50);
+        border-radius: 10px;
+        padding: 112px 20px 40px 20px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        .ImageContainer {
+            width: 573px;
+            height: 300px;
+
+            .UncompromisingImg {
+                object-view-box: xywh(0px 0px 100% 100%);
+            }
+        }
+
+        .Uncompromising__text {
+            padding: 140px 85px 64px 85px;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        flex-direction: row-reverse;
+        margin-top: 120px;
+
+        .ImageContainer {
+            position: absolute;
+            flex-shrink: 0;
+            margin-right: 85px;
+            margin-bottom: 150px;
+            width: 445px;
+            height: 474px;
+
+            .UncompromisingImg {
+                object-view-box: xywh(0px 0px 100% 100%);
+            }
+        }
+
+        .Uncompromising__text {
+            padding: 112px 660px 112px 80px;
+            text-align: left;
+        }
+    }
+}
+
+.HeadquartersSection {
+    display: grid;
+    gap: 64px;
+    text-align: center;
+
+    h3 {
+        font: var(--fontpreset4);
+        color: var(--color-neutral-500);
+    }
+
+    .Headquarters__list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .HeadquartersItem {
+            display: grid;
+            gap: 32px;
+            text-align: center;
+            justify-items: center;
+
+            .HeadquartersItem__text {
+                display: grid;
+                gap: 24px;
+
+                .HeadquartersItem__country {
+                    font: var(--fontpreset3);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+
+        .Headquarters__list {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .HeadquartersItem {
+                text-align: left;
+                justify-items: left;
+                gap: 24px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding-left: 117px;
+        padding-right: 117px;
+    }
+}

@@ -1,0 +1,464 @@
+.HeroSection {
+    position: relative;
+    color: var(--color-neutral-50);
+    padding: 80px 24px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .HeroSection__backgroundImg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .HeroSection__mainText {
+        display: grid;
+        row-gap: 20px;
+
+        .HeroSection__description {
+            opacity: 0.8;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 140px 48px;
+        justify-content: left;
+        text-align: left;
+
+        .HeroSection__mainText {
+            max-width: 445px;
+
+            h2 {
+                font: var(--fontpreset1);
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 140px 80px;
+    }
+}
+
+.StepsSection {
+    background-color: var(--color-neutral-900);
+    padding: 48px 16px;
+    display: grid;
+
+    .StepsGraphic {
+        display: none;
+    }
+
+    .Steps__list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+
+        .StepsItem {
+            display: grid;
+            gap: 24px;
+
+            .StepsItem__count {
+                font: var(--fontpreset1);
+                color: var(--color-orange-200);
+            }
+
+            .StepsItem__title {
+                font: var(--fontpreset3);
+            }
+
+            .StepsItem__title,
+            .StepsItem__description {
+                color: var(--color-neutral-50);
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 64px 32px;
+        gap: 64px;
+
+        .StepsGraphic {
+            display: flex;
+            width: 559px;
+        }
+
+        .StepsCircle {
+            background-color: transparent;
+        }
+
+        .StepsLine {
+            width: calc(100% - 30px);
+            margin-left: 15px;
+            z-index: 1;
+        }
+
+        .Steps__list {
+            flex-direction: row;
+            gap: 32px;
+            text-align: left;
+            justify-content: left;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 96px 155px 96px 80px;
+
+        .StepsGraphic {
+            width: 791px;
+        }
+
+        .Steps__list {
+            gap: 95px;
+            max-width: 1045px;
+
+            .StepsItem {
+                gap: 40px;
+            }
+        }
+    }
+}
+
+.PreferencesSection {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    .Preferences__list {
+        display: grid;
+        gap: 20px;
+
+        .PreferencesItem {
+            opacity: 0.4;
+
+            a {
+                display: flex;
+                flex-direction: row;
+                gap: 24px;
+            }
+
+            .PreferencesItem__count {
+                font: var(--fontpreset4);
+                color: var(--color-neutral-500);
+            }
+
+            .PreferencesItem__name {
+                font: var(--fontpreset4);
+                color: var(--color-neutral-900);
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.PreferencesItem--selected {
+                opacity: 1;
+
+                .PreferencesItem__count {
+                    color: var(--color-teal-600);
+                }
+            }
+        }
+
+        .PreferencesSeparatorItem {
+            hr {
+                height: 1px;
+                background-color: var(--color-neutral-500);
+                opacity: 0.25;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        flex-direction: row;
+        gap: 128px;
+        align-items: start;
+        padding-left: 85px;
+        padding-right: 85px;
+
+        .Preferences__list {
+            gap: 24px;
+        }
+    }
+}
+
+.QuestionsContainer {
+    display: grid;
+    gap: 64px;
+
+    .Questions__list {
+        display: grid;
+        gap: 32px;
+
+        details {
+            display: grid;
+            cursor: pointer;
+
+            summary {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                justify-content: space-between;
+                align-items: center;
+                font: var(--fontpreset2-mobile);
+                color: var(--color-neutral-500);
+            }
+
+            /* For WebKit/Safari browsers which use a non-standard pseudo-element */
+            summary::-webkit-details-marker {
+                display: none;
+            }
+
+            summary::after {
+                content: url('/assets/plan/desktop/icon-arrow.svg');
+                width: 18px;
+                height: 11px;
+                display: inline-block;
+            }
+
+            .Options__list {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .OptionsItem {
+                    .OptionsWrapper {
+                        display: grid;
+                        gap: 16px;
+                        text-align: left;
+                        background-color: var(--color-neutral-100);
+                        padding: 20px;
+                        border-radius: 8px;
+                    }
+
+                    &.OptionsItem:hover .OptionsWrapper {
+                        background-color: var(--color-orange-200);
+                    }
+
+                    &.OptionsItem:hover .OptionsItem__title,
+                    &.OptionsItem:hover .OptionsItem__description {
+                        color: var(--color-neutral-900);
+                    }
+
+                    .OptionsWrapper:focus {
+                        background-color: var(--color-orange-200);
+                        box-shadow:
+                            0 0 0 3px var(--color-neutral-50),
+                            0 0 0 6px var(--color-teal-600);
+                    }
+                    &.OptionsItem--selected .OptionsWrapper {
+                        background-color: var(--color-teal-600);
+                    }
+
+                    &.OptionsItem--selected .OptionsItem__title {
+                        color: var(--color-neutral-0);
+                    }
+
+                    &.OptionsItem--selected .OptionsItem__description {
+                        color: var(--color-neutral-50);
+                    }
+
+                    .OptionsItem__title {
+                        font: var(--fontpreset4);
+                    }
+                }
+            }
+        }
+
+        details[open] {
+            gap: 24px;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        details[data-disabled='true'] {
+            opacity: 0.5;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .Questions__list {
+            gap: 48px;
+
+            details {
+                summary {
+                    font: var(--fontpreset2);
+                }
+
+                .Options__list {
+                    flex-direction: row;
+                    gap: 24px;
+
+                    .OptionsItem .OptionsWrapper {
+                        max-width: 218px;
+                    }
+                }
+            }
+
+            details[open] {
+                gap: 32px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        max-width: 730px;
+
+        .Questions__list {
+            gap: 80px;
+
+            details {
+                summary {
+                    font: var(--fontpreset2);
+                }
+
+                .Options__list {
+                    flex-direction: row;
+                    gap: 23px;
+
+                    .OptionsItem .OptionsWrapper {
+                        padding: 32px 24px;
+                        max-width: 228px;
+                    }
+                }
+            }
+
+            details[open] {
+                gap: 48px;
+            }
+        }
+    }
+}
+
+.OrderSummaryContainer {
+    display: grid;
+    gap: 32px;
+
+    .OrderSummary__content {
+        padding: 48px 24px;
+        background-image: url('/assets/plan/mobile/bg-order-summary.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        text-align: left;
+
+        .OrderSummary__title {
+            font: var(--fontpreset7);
+            color: var(--color-neutral-0);
+            text-transform: uppercase;
+            opacity: 0.5;
+            margin-bottom: 8px;
+        }
+
+        .OrderSummary__text {
+            font: var(--fontpreset4);
+            color: var(--color-neutral-0);
+        }
+    }
+
+    #subscribeBtn {
+        justify-self: right;
+    }
+
+    @media screen and (min-width: 768px) {
+        .OrderSummary__content {
+            padding: 48px;
+        }
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 48px;
+
+        .OrderSummary__content {
+            padding: 48px 64px;
+        }
+    }
+}
+
+.OrderSummarySelectedOption {
+    color: var(--color-teal-600);
+}
+
+#orderSummaryDialog {
+    border: none;
+    padding: 0px;
+    border-radius: 8px;
+
+    .OrderSummaryDialog__header {
+        background-color: var(--color-neutral-900);
+        color: var(--color-neutral-0);
+        text-align: left;
+        padding: 16px 24px;
+    }
+
+    .OrderSummaryDialog__content {
+        background-color: var(--color-neutral-50);
+        display: grid;
+        gap: 32px;
+        padding: 16px 24px;
+
+        .OrderSummaryText__mainText {
+            font: var(--fontpreset4);
+            margin-bottom: 20px;
+            color: var(--color-neutral-500);
+        }
+
+        .OrderSummaryText__subText {
+            font: var(--fontpreset6);
+        }
+
+        .OrderSummaryDialog__footer {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            .OrderSummaryDialog__monthlyCost {
+                font: var(--fontpreset3);
+            }
+
+            #checkoutBtn {
+                width: 100%;
+                height: 57px;
+                padding: 16px 32px;
+            }
+        }
+    }
+
+    @media screen and (width >= 768px) {
+        max-width: 540px;
+
+        .OrderSummaryDialog__header {
+            padding: 44px 48px;
+        }
+
+        .OrderSummaryDialog__content {
+            padding: 48px;
+            gap: 48px;
+
+            .OrderSummaryDialog__footer {
+                flex-direction: row;
+                justify-content: space-between;
+
+                #checkoutBtn {
+                    max-width: 153px;
+                }
+            }
+        }
+    }
+}
+
+dialog::backdrop {
+    background-color: var(--color-neutral-900);
+    opacity: 0.7;
+}
