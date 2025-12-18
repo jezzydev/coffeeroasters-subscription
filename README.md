@@ -89,7 +89,7 @@ Then in CSS, I used the filter property and pointed it to the filters.svg file.
 }
 ```
 
-Another thing I learned is to implement an accordion or toggle using the <details> and <summary> elements.
+Another thing I learned is to implement an accordion or toggle using the details and summary elements.
 
 ```html
 <details>
@@ -112,8 +112,8 @@ Another thing I learned is to implement an accordion or toggle using the <detail
 </details>
 ```
 
-Some workaround had to be made in order to disable the <details> element since the standard attribute disable does not apply to it. To disable it, I had to add an event listener to its click event and then call preventDefault() to stop its default behavior of opening the details/toggle. To re-enable it, the event listener is removed via removeEventListener(). It was important to pass the exact same function reference (disableToggle) used in addEventListener().
-To prevent keyboard focus while disabled, attribute tabindex with value -1 is added to the <details> element and its opacity is set to 0.5 in CSS.
+Some workaround had to be made in order to disable the details element since the standard attribute disable does not apply to it. To disable it, I had to add an event listener to its click event and then call preventDefault() to stop its default behavior of opening the details/toggle. To re-enable it, the event listener is removed via removeEventListener(). It was important to pass the exact same function reference (disableToggle) used in addEventListener().
+To prevent keyboard focus while disabled, attribute tabindex with value -1 is added to the details element and its opacity is set to 0.5 in CSS.
 
 ```js
 function disableDetails(details) {
