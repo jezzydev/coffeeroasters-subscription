@@ -5,11 +5,11 @@ const AS = 'as';
 const CAPSULE = 'capsule';
 const summaryAsUsingList = document.querySelectorAll('.OrderSummaryAsUsing');
 const optionsWrapperButtons = document.querySelectorAll('.OptionsWrapper');
-let prefValue;
-let beanTypeValue;
-let grindValue;
-let qtyValue;
-let deliveryValue;
+let prefValue = null;
+let beanTypeValue = null;
+let grindValue = null;
+let qtyValue = null;
+let deliveryValue = null;
 
 const shipmentPrices = {
     '250g': { weekly: 7.2, biweekly: 9.6, monthly: 12.0 },
@@ -41,7 +41,7 @@ optionsWrapperButtons.forEach((btn) => {
     });
 });
 
-if (subscribeBtn !== null) {
+if (subscribeBtn) {
     subscribeBtn.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -53,7 +53,7 @@ if (subscribeBtn !== null) {
     });
 }
 
-if (checkoutBtn !== null) {
+if (checkoutBtn) {
     checkoutBtn.addEventListener('click', function (e) {
         e.preventDefault();
         orderSummaryDialog.close();
