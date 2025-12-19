@@ -27,7 +27,7 @@ optionsWrapperButtons.forEach((btn) => {
 
         if (!optionsItem.classList.contains(CLASS_OPTIONSITEM__SELECTED)) {
             //get the currently selected OptionsItem, if any, and unselect it
-            let sibling = optionsItem.parentNode.querySelector(
+            const sibling = optionsItem.parentNode.querySelector(
                 `.${CLASS_OPTIONSITEM__SELECTED}`,
             );
 

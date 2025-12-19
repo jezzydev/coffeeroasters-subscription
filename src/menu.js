@@ -6,14 +6,14 @@ const mobileMenuContainer = document.querySelector(
 
 mobileMenuBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    if (mobileMenuContainer != null) {
+    if (mobileMenuContainer !== null) {
         mobileMenuContainer.style.display = 'grid';
     }
 });
 
 closeMenuBtn.addEventListener('click', function (e) {
     e.preventDefault();
-    if (mobileMenuContainer != null) {
+    if (mobileMenuContainer !== null) {
         mobileMenuContainer.style.display = 'none';
     }
 });
