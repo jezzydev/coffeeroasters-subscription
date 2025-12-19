@@ -1,7 +1,7 @@
 .HeroSection {
     position: relative;
     color: var(--color-neutral-50);
-    padding: 93px 20px;
+    padding: 93px 1.25rem;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -101,7 +101,7 @@
 
     .ImageContainer {
         position: relative;
-        margin-bottom: -74px;
+        margin-block-end: -74px;
         width: 280px;
         height: 156px;
         overflow: hidden;
@@ -121,7 +121,7 @@
         background-color: var(--color-neutral-900);
         color: var(--color-neutral-50);
         border-radius: 10px;
-        padding: 112px 20px 40px 20px;
+        padding: 7rem 1.25rem 2.5rem 1.25rem;
         text-align: center;
     }
 
@@ -136,19 +136,19 @@
         }
 
         .Uncompromising__text {
-            padding: 140px 85px 64px 85px;
+            padding: 8.75rem 85px 4rem 85px;
         }
     }
 
     @media screen and (min-width: 1280px) {
         flex-direction: row-reverse;
-        margin-top: 120px;
+        margin-block-start: 120px;
 
         .ImageContainer {
             position: absolute;
             flex-shrink: 0;
             margin-right: 85px;
-            margin-bottom: 150px;
+            margin-block-end: 150px;
             width: 445px;
             height: 474px;
 
@@ -158,7 +158,7 @@
         }
 
         .Uncompromising__text {
-            padding: 112px 660px 112px 80px;
+            padding: 7rem 41.25rem 7rem 5rem;
             text-align: left;
         }
     }

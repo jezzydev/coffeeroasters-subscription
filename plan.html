@@ -30,9 +30,11 @@
                   />
               </button>
                 <nav>
-                    <a class="NavLinks--header" href="index.html">Home</a>
-                    <a class="NavLinks--header" href="about.html">About us</a>
-                    <a class="NavLinks--header" href="plan.html">Create your plan</a>
+                    <ul>
+                      <li><a class="NavLinks--header" href="index.html">Home</a></li>
+                      <li><a class="NavLinks--header" href="about.html">About us</a></li>
+                      <li><a class="NavLinks--header" href="plan.html">Create your plan</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -53,9 +55,11 @@
                 </button>
             </div>
             <nav>
-                <a class="NavLinks--header" href="index.html">Home</a>
-                <a class="NavLinks--header" href="about.html">About us</a>
-                <a class="NavLinks--header" href="plan.html">Create your plan</a>
+                <ul>
+                  <li><a class="NavLinks--header" href="index.html">Home</a></li>
+                  <li><a class="NavLinks--header" href="about.html">About us</a></li>
+                  <li><a class="NavLinks--header" href="plan.html">Create your plan</a></li>
+                </ul>
             </nav>
         </div>
       </header>
@@ -303,11 +307,25 @@
                 src="./assets/shared/desktop/logo-light.svg"
                 alt="Coffeeroasters Logo"
             />
-            <div class="Footer__links">
-                <a class="NavLinks--footer" href="index.html">Home</a>
-                <a class="NavLinks--footer" href="about.html">About us</a>
-                <a class="NavLinks--footer" href="plan.html">Create your plan</a>
-            </div>
+            <nav class="Footer__links" aria-label="Footer navigation">
+                <ul>
+                    <li>
+                        <a class="NavLinks--footer" href="index.html"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a class="NavLinks--footer" href="about.html"
+                            >About us</a
+                        >
+                    </li>
+                    <li>
+                        <a class="NavLinks--footer" href="plan.html"
+                            >Create your plan</a
+                        >
+                    </li>
+                </ul>
+            </nav>
             <div class="Footer__socialIcons">
                 <a href="https://www.facebook.com/">
                     <span class="SocialIconWrapper">

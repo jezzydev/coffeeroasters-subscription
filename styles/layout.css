@@ -28,7 +28,7 @@
         justify-content: space-between;
 
         .HeaderNav__container {
-            nav {
+            nav ul {
                 display: none;
 
                 .NavLinks--header {
@@ -36,7 +36,7 @@
                     font: var(--fontpreset8);
                 }
 
-                ..NavLinks--header:hover {
+                .NavLinks--header:hover {
                     color: var(--color-neutral-900);
                 }
             }
@@ -54,7 +54,8 @@
                 width: 237px;
                 height: 24px;
             }
-            .HeaderNav__container nav {
+
+            .HeaderNav__container nav ul {
                 display: flex;
                 flex-direction: row;
                 gap: 33px;
@@ -99,7 +100,7 @@
             }
         }
 
-        nav {
+        nav ul {
             display: grid;
             gap: 32px;
             justify-items: center;
@@ -146,7 +147,7 @@ section p {
             display: block;
         }
 
-        .Footer__links {
+        .Footer__links ul {
             display: flex;
             flex-direction: row;
             gap: 20px;

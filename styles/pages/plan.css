@@ -1,7 +1,7 @@
 .HeroSection {
     position: relative;
     color: var(--color-neutral-50);
-    padding: 80px 24px;
+    padding: 5rem 1.5rem;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@
     }
 
     @media screen and (min-width: 768px) {
-        padding: 140px 48px;
+        padding: 8.75rem 3rem;
         justify-content: left;
         text-align: left;
 
@@ -42,13 +42,13 @@
     }
 
     @media screen and (min-width: 1280px) {
-        padding: 140px 80px;
+        padding: 8.75rem 5rem;
     }
 }
 
 .StepsSection {
     background-color: var(--color-neutral-900);
-    padding: 48px 16px;
+    padding: 3rem 1rem;
     display: grid;
 
     .StepsGraphic {
@@ -82,7 +82,7 @@
     }
 
     @media screen and (min-width: 768px) {
-        padding: 64px 32px;
+        padding: 4rem 2rem;
         gap: 64px;
 
         .StepsGraphic {
@@ -96,7 +96,7 @@
 
         .StepsLine {
             width: calc(100% - 30px);
-            margin-left: 15px;
+            margin-inline-start: 15px;
             z-index: 1;
         }
 
@@ -109,7 +109,7 @@
     }
 
     @media screen and (min-width: 1280px) {
-        padding: 96px 155px 96px 80px;
+        padding: 6rem 155px 6rem 5rem;
 
         .StepsGraphic {
             width: 791px;
@@ -239,21 +239,13 @@
                         border-radius: 8px;
                     }
 
-                    &.OptionsItem:hover .OptionsWrapper {
-                        background-color: var(--color-orange-200);
-                    }
-
-                    &.OptionsItem:hover .OptionsItem__title,
-                    &.OptionsItem:hover .OptionsItem__description {
-                        color: var(--color-neutral-900);
-                    }
-
                     .OptionsWrapper:focus {
                         background-color: var(--color-orange-200);
                         box-shadow:
                             0 0 0 3px var(--color-neutral-50),
                             0 0 0 6px var(--color-teal-600);
                     }
+
                     &.OptionsItem--selected .OptionsWrapper {
                         background-color: var(--color-teal-600);
                     }
@@ -264,6 +256,15 @@
 
                     &.OptionsItem--selected .OptionsItem__description {
                         color: var(--color-neutral-50);
+                    }
+
+                    &.OptionsItem:hover .OptionsWrapper {
+                        background-color: var(--color-orange-200);
+                    }
+
+                    &.OptionsItem:hover .OptionsItem__title,
+                    &.OptionsItem:hover .OptionsItem__description {
+                        color: var(--color-neutral-900);
                     }
 
                     .OptionsItem__title {
@@ -327,7 +328,7 @@
                     gap: 23px;
 
                     .OptionsItem .OptionsWrapper {
-                        padding: 32px 24px;
+                        padding: 2rem 1.5rem;
                         max-width: 228px;
                     }
                 }
@@ -358,7 +359,7 @@
             color: var(--color-neutral-0);
             text-transform: uppercase;
             opacity: 0.5;
-            margin-bottom: 8px;
+            margin-block-end: 8px;
         }
 
         .OrderSummary__text {
@@ -373,7 +374,7 @@
 
     @media screen and (min-width: 768px) {
         .OrderSummary__content {
-            padding: 48px;
+            padding: 3rem;
         }
     }
 
@@ -381,7 +382,7 @@
         gap: 48px;
 
         .OrderSummary__content {
-            padding: 48px 64px;
+            padding: 3rem 4rem;
         }
     }
 }
@@ -399,18 +400,18 @@
         background-color: var(--color-neutral-900);
         color: var(--color-neutral-0);
         text-align: left;
-        padding: 16px 24px;
+        padding: 1rem 1.5rem;
     }
 
     .OrderSummaryDialog__content {
         background-color: var(--color-neutral-50);
         display: grid;
         gap: 32px;
-        padding: 16px 24px;
+        padding: 1rem 1.5rem;
 
         .OrderSummaryText__mainText {
             font: var(--fontpreset4);
-            margin-bottom: 20px;
+            margin-block-end: 20px;
             color: var(--color-neutral-500);
         }
 
@@ -439,11 +440,11 @@
         max-width: 540px;
 
         .OrderSummaryDialog__header {
-            padding: 44px 48px;
+            padding: 2.75rem 3rem;
         }
 
         .OrderSummaryDialog__content {
-            padding: 48px;
+            padding: 3rem;
             gap: 48px;
 
             .OrderSummaryDialog__footer {

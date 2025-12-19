@@ -26,6 +26,9 @@ html {
 
     --color-orange-200: #fdd6ba;
 
+    --color-gray-start: #979797;
+    --color-cream-end: #fefcf7;
+
     /* fonts */
     --fontWeight-900: 900;
     --fontFamily-Fraunces: 'Fraunces', serif;
@@ -69,12 +72,16 @@ h2 {
     font: var(--fontpreset2-mobile);
 }
 
-h3 {
+h3,
+h4 {
     margin: 0;
 }
 
 a {
     background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    border: none;
 }
 
 p {
@@ -119,6 +126,7 @@ button,
 [type='reset'],
 [type='submit'] {
     -webkit-appearance: button;
+    appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -142,13 +150,6 @@ li {
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
-
-a {
-    background-color: transparent;
-    text-decoration: none;
-    outline: none;
-    border: none;
 }
 
 .hidden {

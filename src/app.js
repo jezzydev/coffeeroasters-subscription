@@ -4,8 +4,7 @@ const USING = 'using';
 const AS = 'as';
 const CAPSULE = 'capsule';
 const summaryAsUsingList = document.querySelectorAll('.OrderSummaryAsUsing');
-
-let optionsWrapperButtons = document.querySelectorAll('.OptionsWrapper');
+const optionsWrapperButtons = document.querySelectorAll('.OptionsWrapper');
 let prefValue;
 let beanTypeValue;
 let grindValue;
@@ -24,7 +23,7 @@ const checkoutBtn = document.querySelector('#checkoutBtn');
 optionsWrapperButtons.forEach((btn) => {
     btn.addEventListener('click', function (e) {
         e.preventDefault();
-        let optionsItem = this.closest('.OptionsItem');
+        const optionsItem = this.closest('.OptionsItem');
 
         if (!optionsItem.classList.contains(CLASS_OPTIONSITEM__SELECTED)) {
             //get the currently selected OptionsItem, if any, and unselect it
@@ -32,7 +31,7 @@ optionsWrapperButtons.forEach((btn) => {
                 `.${CLASS_OPTIONSITEM__SELECTED}`,
             );
 
-            if (sibling != null) {
+            if (sibling !== null) {
                 sibling.classList.remove(CLASS_OPTIONSITEM__SELECTED);
             }
 
@@ -42,19 +41,19 @@ optionsWrapperButtons.forEach((btn) => {
     });
 });
 
-if (subscribeBtn != null) {
+if (subscribeBtn !== null) {
     subscribeBtn.addEventListener('click', function (e) {
         e.preventDefault();
 
-        let monthlyCost = calculateMonthlyCost(qtyValue, deliveryValue);
-        let monthlyCostText =
+        const monthlyCost = calculateMonthlyCost(qtyValue, deliveryValue);
+        const monthlyCostText =
             orderSummaryDialog.querySelector('.OrderTotalAmount');
         monthlyCostText.innerHTML = monthlyCost.toFixed(2);
         orderSummaryDialog.showModal();
     });
 }
 
-if (checkoutBtn != null) {
+if (checkoutBtn !== null) {
     checkoutBtn.addEventListener('click', function (e) {
         e.preventDefault();
         orderSummaryDialog.close();
@@ -62,9 +61,9 @@ if (checkoutBtn != null) {
 }
 
 function processSelection(optionsItem) {
-    let questionsItem = optionsItem.closest('.QuestionsItem');
-    let dataQuestion = questionsItem.getAttribute('data-question');
-    let title = optionsItem.querySelector('.OptionsItem__title');
+    const questionsItem = optionsItem.closest('.QuestionsItem');
+    const dataQuestion = questionsItem.getAttribute('data-question');
+    const title = optionsItem.querySelector('.OptionsItem__title');
 
     switch (dataQuestion) {
         case 'pref':
@@ -93,7 +92,7 @@ function processSelection(optionsItem) {
 }
 
 function enableDisableGrindDetails(pref) {
-    let grindDetails = document.querySelector('#questionGrind details');
+    const grindDetails = document.querySelector('#questionGrind details');
 
     if (pref === CAPSULE) {
         disableDetails(grindDetails);
@@ -135,16 +134,18 @@ function updateSummaryAsUsing(pref) {
 }
 
 function updateSummaryText(dataSuffix, value) {
-    let fields = document.querySelectorAll(
+    const fields = document.querySelectorAll(
         `span[data-summary='${dataSuffix}']`,
     );
+
     fields.forEach((f) => {
         f.innerHTML = value;
     });
 }
 
 function showGrindText(showText) {
-    let grindText = document.querySelectorAll('.OrderSummary__grindText');
+    const grindText = document.querySelectorAll('.OrderSummary__grindText');
+
     if (showText) {
         grindText.forEach((f) => {
             f.classList.remove(CLASS_HIDDEN);
@@ -160,9 +161,11 @@ function updateShipmentPriceText(qty) {
     const weeklyShipmentPriceText = document.querySelector(
         '#deliveryWeekly .ShipmentPrice',
     );
+
     const biWeeklyShipmentPriceText = document.querySelector(
         '#deliveryBiWeekly .ShipmentPrice',
     );
+
     const monthlyShipmentPriceText = document.querySelector(
         '#deliveryMonthly .ShipmentPrice',
     );
@@ -174,14 +177,20 @@ function updateShipmentPriceText(qty) {
 }
 
 function calculateMonthlyCost(qty, delivery) {
+    const shipment = shipmentPrices[qty];
+
+    if (!shipment) {
+        return 0;
+    }
+
     let monthlyCost = 0;
 
     if (delivery === 'weekly') {
-        monthlyCost = shipmentPrices[qty].weekly * 4;
+        monthlyCost = shipment.weekly * 4;
     } else if (delivery === 'biweekly') {
-        monthlyCost = shipmentPrices[qty].biweekly * 2;
+        monthlyCost = shipment.biweekly * 2;
     } else if (delivery === 'monthly') {
-        monthlyCost = shipmentPrices[qty].monthly;
+        monthlyCost = shipment.monthly;
     }
 
     return monthlyCost;
@@ -189,11 +198,12 @@ function calculateMonthlyCost(qty, delivery) {
 
 function enableDisableSubscribeBtn() {
     if (
-        prefValue != null &&
-        beanTypeValue != null &&
-        qtyValue != null &&
-        deliveryValue != null &&
-        (prefValue === CAPSULE || (prefValue !== CAPSULE && grindValue != null))
+        prefValue !== null &&
+        beanTypeValue !== null &&
+        qtyValue !== null &&
+        deliveryValue !== null &&
+        (prefValue === CAPSULE ||
+            (prefValue !== CAPSULE && grindValue !== null))
     ) {
         subscribeBtn.disabled = false;
     } else {
